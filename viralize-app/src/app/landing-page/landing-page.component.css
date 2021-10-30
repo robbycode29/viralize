@@ -5,3 +5,20 @@ body {
     background-color: white;
     height: 100vh;
 }
+
+.header-bar {
+    background-color: #1A0622;
+}
+
+.header-bar {
+    justify-content: center;
+}
+
+.navbar-toggler {
+    position: absolute;
+    left: 20px;
+}
+
+.logo {
+    height: 50px;
+}
