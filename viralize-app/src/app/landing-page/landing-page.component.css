@@ -26,3 +26,16 @@ body {
 .navbar-toggler {
     border: none;
 }
+
+.desk-logo {
+    display: none;
+}
+
+@media screen and (min-width: 810px){
+    .mob-logo {
+        display: none;
+    }
+    .desk-logo {
+        display: block;
+    }
+}
