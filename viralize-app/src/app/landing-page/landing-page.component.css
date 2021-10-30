@@ -1,0 +1,41 @@
+html{
+    height: 100vh;
+}
+body {
+    background-color: white;
+    height: 100vh;
+}
+
+.header-bar {
+    background-color: #1A0622;
+}
+
+.header-bar {
+    justify-content: center;
+}
+
+.navbar-toggler {
+    position: absolute;
+    left: 20px;
+}
+
+.logo {
+    height: 50px;
+}
+
+.navbar-toggler {
+    border: none;
+}
+
+.desk-logo {
+    display: none;
+}
+
+@media screen and (min-width: 810px){
+    .mob-logo {
+        display: none;
+    }
+    .desk-logo {
+        display: block;
+    }
+}
