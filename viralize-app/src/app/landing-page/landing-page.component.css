@@ -22,3 +22,7 @@ body {
 .logo {
     height: 50px;
 }
+
+.navbar-toggler {
+    border: none;
+}
