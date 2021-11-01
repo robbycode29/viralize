@@ -63,6 +63,7 @@ body {
     height: 20px;
 }
 
+
 @media screen and (min-width: 810px){
     .mob-logo {
         display: none;
@@ -71,3 +72,206 @@ body {
         display: block;
     }
 }
+
+
+/*cover section*/
+.cover-background {
+    background-color: white;
+}
+
+.cover {
+    height: 467px;
+    background-color: #f2877f;
+
+    display: flex;
+    flex-direction: column;
+    color: white;   
+}
+
+
+
+.cover-wrapper {
+    display: grid;
+    grid-template-columns: 0.5fr 1fr;
+    row-gap: 10px;
+    margin-left: 20px;
+    margin-right: 0px;
+}
+
+.coverspacing {
+    height: 100px;
+}
+
+h1 {
+    font-size: 22px;
+    text-align: center;
+    font-weight: bold;
+}
+
+h2 {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 0;
+    vertical-align: middle;
+}
+
+h3 {
+    font-size: 16px;
+    font-weight: bold;
+    width: fit-content;
+    vertical-align: middle;
+    margin-bottom: 0;
+}
+
+.settings-CTA {
+    display: flex;
+    align-items: center;
+}
+
+.switch-CTA-first {  
+    height: 30px;
+    width: 51px;
+    margin-left: 20px;
+    margin-right: 20px;
+    transform: translateY(0px);
+    background-color: #EAEAEA;
+    border-radius: 20px;
+    border: 3px solid white;
+
+    animation: 'setting-on-switch';
+    animation-duration: 1s;
+    animation-timing-function: ease();
+    animation-delay: 0.5s;
+    animation-fill-mode: forwards;
+}
+
+.switch-knob-first {
+    position: absolute;
+    height: 24px;
+    width: 24px;
+    background-color: #1a0622;
+    border-radius: 20px;
+
+
+    animation: 'setting-on-knob';
+    animation-duration: 0.5s;
+    animation-timing-function: ease();
+    animation-delay: 0.5s;
+    animation-fill-mode: forwards;
+}
+
+
+.switch-CTA-second {  
+    height: 30px;
+    width: 51px;
+    margin-left: 37px;
+    margin-right: 20px;
+    transform: translateY(0px);
+    background-color: #0B619A;
+    border-radius: 20px;
+    border: 3px solid white;
+
+    animation-name: 'setting-off-switch', 'setting-off-switch-total';
+    animation-duration: 0.8s, 0s;
+    animation-timing-function: ease();
+    animation-delay: 0s, 0s;
+    animation-fill-mode: none, forwards;
+
+}
+
+.switch-knob-second {
+    position: absolute;
+    height: 24px;
+    width: 24px;
+    background-color: #1a0622;
+    border-radius: 20px;
+    right: 0;
+
+    animation: 'setting-off-knob';
+    animation-duration: 0.5s;
+    animation-timing-function: ease();
+    animation-delay: 0.5s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes setting-on-knob {
+    from {
+        left: 0;
+    }
+    to {
+        transform: translateX(21.5px);
+    }
+}
+
+@keyframes setting-on-switch {
+    from {
+        background: linear-gradient(to right,#0B619A 0%, #EAEAEA 100%);
+    }
+    to {
+        background: linear-gradient(to right, #0B619A 100%, #EAEAEA 0%);
+    }
+}
+
+@keyframes setting-off-knob {
+    from {
+        right: 0;
+    }
+    to {
+        transform: translateX(-21.5px);
+    }
+}
+
+@keyframes setting-off-switch {
+    from {
+        background: linear-gradient(to right,#0B619A 100%, #EAEAEA 0%);
+    }
+    to {
+        background: linear-gradient(to right, #0B619A 0%, #EAEAEA 100%);
+        /* background-color: #EAEAEA; */
+    }
+}
+
+@keyframes setting-off-switch-total {
+    from {
+        background: linear-gradient(to right, #0B619A 0%, #EAEAEA 100%);
+    }
+    to {  
+        background-color: #EAEAEA;
+    }
+}
+
+
+.vector-line {
+    margin-left: 100px;
+    margin-top: 30px;
+}
+
+.button-CTA {
+    width: fit-content;
+    margin-left: 20px;
+    margin-bottom: 40px;
+
+    border-radius: 20px;
+    border: none;
+
+    background-color: #0B619A;
+    color: white;
+    font-weight: bold;
+    padding: 5px;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.button-CTA:hover {
+    background-color: #EAEAEA;
+    color: #1A0622;
+    transition: 0.5s;
+}
+.button-CTA:not( :hover) {
+    background-color: #0B619A;
+    color: white;
+    transition: 0.5s;
+}
+
+
+
