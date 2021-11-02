@@ -5,6 +5,8 @@ body {
     background-color: white;
     height: 100vh;
     font-family: 'Roboto', sans-serif;
+    cursor: default;
+    caret-color: transparent;
 }
 
 
@@ -314,7 +316,7 @@ h3 {
     }
 
     h1 {
-        font-size: 24px;
+        font-size: 33px;
     }
     h2 {
         font-size: 20px;
@@ -393,5 +395,61 @@ h3 {
     }
 
 }
+
+/* design tree section */
+
+.design-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    row-gap: 80px;
+    margin-top: 80px;
+    margin-bottom: 80px;
+}
+
+.design-section h2 {
+    position: relative;
+    right: -10%;
+}
+
+.design-section-desk {
+    display: none;
+}
+
+@media screen and (min-width: 810px) {
+    .design-section {
+        display: none;
+    }
+    
+    .design-section-desk {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    column-gap: 30%;
+    margin: 40px;
+    margin-top: 80px;
+    margin-bottom: 80px;
+    
+    }
+
+
+    .design-section-text {
+        display: flex;
+        flex-direction: column;
+        row-gap: 80px;
+    }
+
+    .design-section-desk h2 {
+        position: relative;
+        right: 0;
+    }
+
+    .design-tree {
+        height: 500px;
+    }
+}
+
+
 
 
