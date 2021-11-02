@@ -24,6 +24,10 @@ body {
     left: 20px;
 }
 
+.text-muted {
+    text-align: center;
+}
+
 .logo {
     height: 50px;
 }
@@ -297,7 +301,7 @@ h3 {
     display: none;
 }
 
-@media screen and (min-width: 1190px) {
+@media screen and (min-width: 1179px) {
     .cover-background {
         display: flex;
         background-color:#1A0622;
@@ -446,6 +450,103 @@ h3 {
     }
 
     .design-tree {
+        height: 500px;
+    }
+}
+
+
+/* development section */
+
+.dev-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    row-gap: 80px;
+    padding-top: 80px;
+    padding-bottom: 80px;
+    background-color: #1A0622;
+    color: white;
+}
+
+.dev-section h2 {
+    position: relative;
+    text-align: center;
+}
+
+.dev-section-desk {
+    display: none;
+}
+
+@media screen and (min-width: 810px) {
+    .dev-section {
+        display: none;
+    }
+    
+    .dev-section-desk {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    column-gap: 10%;
+    padding: 40px;
+    padding-top: 80px;
+    padding-bottom: 80px;
+    background-color: #1A0622;
+    color: white;
+    }
+
+
+    .dev-section-text {
+        display: flex;
+        flex-direction: column;
+        row-gap: 80px;
+    }
+
+    .dev-section-desk h2 {
+        position: relative;
+        text-align: center;
+    }
+
+    .code-sample {
+        height: 500px;
+    }
+}
+
+@media screen and (min-width: 1179px) {
+    .dev-section {
+        display: none;
+    }
+    
+    .dev-section-desk {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    column-gap: 20%;
+    padding: 80px;
+    padding-top: 80px;
+    padding-bottom: 80px;
+    background-color: #1A0622;
+    color: white;
+    }
+
+
+    .dev-section-text {
+        display: flex;
+        flex-direction: column;
+        row-gap: 80px;
+    }
+
+    .design-section-desk h1 {
+        position: relative;
+        text-align: left;
+    }
+    
+    .dev-section-desk h2 {
+        position: relative;
+        text-align: left;
+    }
+
+    .code-sample {
         height: 500px;
     }
 }
