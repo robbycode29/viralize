@@ -549,7 +549,83 @@ h3 {
     .code-sample {
         height: 500px;
     }
+
 }
+
+
+/* three section */
+
+.three-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    row-gap: 80px;
+    padding: 20px;
+    padding-top: 80px;
+    padding-bottom: 80px;
+    background-color: #D1D3D5;
+}
+
+.three-section h2 {
+    display: block;
+    position: relative;
+    text-align: right;
+}
+
+.three-section h1 {
+    display: block;
+    text-align: right;
+}
+
+.three-section-text {
+    display: none;
+}
+
+
+@media screen and (min-width: 810px) {  
+    
+    .three-section h2 {
+        display: none;
+    }
+
+    .three-section h1 {
+        display: none;
+    }
+
+    .three-section-desk {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    column-gap: 13%;
+    padding: 40px;
+    padding-top: 80px;
+    padding-bottom: 80px;
+    background-color: #D1D3D5;
+    }
+
+
+    .three-section-text {
+        display: flex;
+        flex-direction: column;
+        row-gap: 80px;
+    }
+
+    .three-section-desk h2 {
+        position: relative;
+        text-align: right;
+    }
+    
+    .three-section-desk h1 {
+        position: relative;
+        text-align: right;
+    }
+
+
+    
+}
+
+
 
 
 
