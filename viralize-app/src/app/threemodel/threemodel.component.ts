@@ -27,9 +27,9 @@ export class ThreemodelComponent implements OnInit {
     const controls = new OrbitControls(camera, renderer.domElement); 
 
     renderer.setPixelRatio(window.devicePixelRatio);
-    renderer.setSize(window.innerWidth/3, window.innerHeight/3);
+    renderer.setSize(window.innerWidth/2.5, window.innerHeight/2.5);
 
-    camera.position.set(0, 10, 15);
+    camera.position.set(0, 15, 40);
 
     const light = new THREE.DirectionalLight(0xffffff, 1);
     light.target.position.set(0, 0, 0);
@@ -41,7 +41,7 @@ export class ThreemodelComponent implements OnInit {
 
     scene.add(light);
     scene.add(light.target);
-    // scene.add(sphere);
+    scene.add(sphere);
     scene.add(camera);
 
     const gltfloader = new GLTFLoader();
@@ -51,40 +51,40 @@ export class ThreemodelComponent implements OnInit {
 //dracoLoader.setDecoderPath( '/examples/js/libs/draco/' );
 //gltfloader.setDRACOLoader( dracoLoader );
 
-let drill: any;
-// Load a glTF resource
-gltfloader.load(
-	// resource URL
-	'/assets/latte.glb',
-	// called when the resource is loaded
+// let drill: any;
+// // Load a glTF resource
+// gltfloader.load(
+// 	// resource URL
+// 	'/assets/latte.glb',
+// 	// called when the resource is loaded
 
-	function ( gltf ) {
+// 	function ( gltf ) {
 
-    drill = gltf.scene;
-		scene.add( drill );
-    drill.position.setY(-5);
-    drill.rotation.y -= 0.005;
+//     drill = gltf.scene;
+// 		scene.add( drill );
+//     drill.position.setY(-5);
+//     drill.rotation.y -= 0.005;
 
-		gltf.animations; // Array<THREE.AnimationClip>
-		gltf.scene; // THREE.Group
-		gltf.scenes; // Array<THREE.Group>
-		gltf.cameras; // Array<THREE.Camera>
-		gltf.asset; // Object
+// 		gltf.animations; // Array<THREE.AnimationClip>
+// 		gltf.scene; // THREE.Group
+// 		gltf.scenes; // Array<THREE.Group>
+// 		gltf.cameras; // Array<THREE.Camera>
+// 		gltf.asset; // Object
 
-	},
-	// called while loading is progressing
-	function ( xhr ) {
+// 	},
+// 	// called while loading is progressing
+// 	function ( xhr ) {
 
-		console.log( ( xhr.loaded / xhr.total * 100 ) + '% loaded' );
+// 		console.log( ( xhr.loaded / xhr.total * 100 ) + '% loaded' );
 
-	},
-	// called when loading has errors
-	function ( error ) {
+// 	},
+// 	// called when loading has errors
+// 	function ( error ) {
 
-		console.log( 'An error happened' );
+// 		console.log( 'An error happened' );
 
-	}
-);
+// 	}
+// );
 
     const sceneBackground = new THREE.TextureLoader().load('/assets/scene-background.svg');
     scene.background = sceneBackground;
@@ -92,13 +92,9 @@ gltfloader.load(
     function animate() {
       requestAnimationFrame(animate);
     
-      drill.rotation.y += -0.005;
-      //iss.rotation.y += 0.0007;
-      
-      //mars.rotation.z += 0.0002;
-      
-    
-    
+      // drill.rotation.y += -0.005;
+      sphere.rotation.y += -0.005;
+     
       controls.update();
     
       renderer.render(scene, camera);
