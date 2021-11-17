@@ -1,0 +1,117 @@
+h1 {
+    font-size: 22px;
+}
+
+h2 {
+    font-size: 18px;
+}
+
+p {
+    font-size: 12px;
+    margin: 0;
+}
+
+@media screen and (min-width: 1179px) {
+    h1 {
+        font-size: 33px;
+    }
+    
+    h2 {
+        font-size: 20px;
+    }
+    
+    p {
+        font-size: 18px;
+        margin: 0;
+    }
+}
+
+
+form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Roboto', sans-serif;
+    margin: 10px;
+    margin-top: 100px;
+    margin-bottom: 100px;
+}
+
+.separator {
+    height: 50px
+}
+
+
+.name-email {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    row-gap: 20px;
+}
+
+.same-line {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    column-gap: 10px;
+    width: 100%;
+}
+
+hr {
+    width: 80px;
+    height: 1px;
+    background-color: black;
+}
+
+.inputs {
+    width: 100%;
+    cursor: text;
+    caret-color: black;
+}
+
+input {
+    border: 1.5px solid black;
+    border-radius: 10px;
+}
+
+textarea {
+    border: 1.5px solid black;
+    border-radius: 10px;
+}
+
+textarea {
+    resize: none;
+    width: 100%;
+    height: 200px;
+    cursor: text;
+    caret-color: black;
+}
+
+.terms {
+    background-color: transparent;
+    border: none;
+    font-size: 14px;
+    margin-left: -10px;
+    color: #0B619A;
+}
+
+.submit {
+    padding: 7px;
+    width: 90px;
+    border-radius: 7px;
+    background-color: #D2D2D2;
+    border: none;
+}
+
+.submit:hover {
+    background-color: #e9e9e9;
+    transition: 0.5s;
+}
+
+.submit:not(:hover) {
+    background-color: #D2D2D2;
+    transition: 0.5s;
+}
