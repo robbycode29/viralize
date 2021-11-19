@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-footer',
@@ -7,9 +7,19 @@ import { Component, OnInit } from '@angular/core';
 })
 export class FooterComponent implements OnInit {
 
-  constructor() { }
+  constructor() { 
+  }
 
   ngOnInit(): void {
+
+    let home = document.querySelector('.home-btn-footer');
+    let page = document.querySelector('app-landing-page');
+
+    home?.addEventListener('click', (event) => {
+      page?.scrollIntoView({
+        behavior: 'smooth'
+      });
+    });
   }
 
 }
