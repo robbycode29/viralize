@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { smootherstep } from 'three/src/math/MathUtils';
 
 @Component({
   selector: 'app-landing-page',
@@ -15,17 +14,18 @@ export class LandingPageComponent implements OnInit {
     let home = document.querySelector('.home-btn-header');
     let contact = document.querySelector('.contact-btn-header');
     let contactSection = document.getElementById('contact-section');
+    let buttonCTA = document.querySelector('.button-CTA');
 
     home?.addEventListener('click', (event) => {
       window.location.href = '/';
     });
 
-    contact?.addEventListener('click', (event) => {
-      contactSection?.scrollIntoView({
-        behavior: 'smooth',
-      })
+    const scrollToContact = () => contactSection?.scrollIntoView({
+      behavior: 'smooth',
     });
 
+    contact?.addEventListener('click', (event) => scrollToContact());
+    buttonCTA?.addEventListener('click', (event) => scrollToContact());
 
   }
 
