@@ -96,6 +96,7 @@ textarea {
     font-size: 14px;
     margin-left: -10px;
     color: #0B619A;
+    cursor: pointer;
 }
 
 .submit {
@@ -104,6 +105,7 @@ textarea {
     border-radius: 7px;
     background-color: #D2D2D2;
     border: none;
+    cursor: pointer;
 }
 
 .submit:hover {
