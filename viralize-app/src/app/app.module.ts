@@ -7,6 +7,7 @@ import { LandingPageComponent } from './landing-page/landing-page.component';
 import { ThreemodelComponent } from './threemodel/threemodel.component';
 import { ContactComponent } from './contact/contact.component';
 import { FooterComponent } from './footer/footer.component';
+import { LegalComponent } from './legal/legal.component';
 
 @NgModule({
   declarations: [
@@ -14,7 +15,8 @@ import { FooterComponent } from './footer/footer.component';
     LandingPageComponent,
     ThreemodelComponent,
     ContactComponent,
-    FooterComponent
+    FooterComponent,
+    LegalComponent
   ],
   imports: [
     BrowserModule,

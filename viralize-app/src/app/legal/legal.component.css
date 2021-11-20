@@ -1,0 +1,79 @@
+.overlay {
+    display: none;
+    
+    height: 100vh;
+    background-color: white;
+    opacity: 50%;
+    position: fixed;
+    z-index: 2;
+    width: 100%;
+    top: 0;
+}
+
+.container {
+    display: none;
+    position: fixed;
+    z-index: 3;
+    top: 100px;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    right: 0;
+    left: 0;
+    margin-top: -100px;
+    width: 100%;
+}
+
+.popup-window {
+    display: flex;
+    flex-direction: column;
+    row-gap: 50px;
+    justify-content: center;
+    align-items: center;
+    padding-top: 30px;
+    padding-bottom: 20px;
+    padding-left: 50px;
+    padding-right: 50px;
+
+    background-color: white;
+    border-radius: 50px;
+    border: 1px solid #1A0622;
+}
+
+h1 {
+    font-size: 18px;
+}
+
+p {
+    font-size: 12px;
+}
+
+@media screen and (min-width: 1179px) {
+    h1 {
+        font-size: 24px;
+    }
+    
+    p {
+        font-size: 18px;
+    }
+
+    .popup-window {
+        padding-top: 80px;
+        padding-bottom: 30px;
+    }
+}
+
+
+button {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+}
+button:hover {
+    color: rgb(110, 110, 110);
+    transition: 0.3s;
+}
+button:not(:hover) {
+    color: rgb(0, 0, 0);
+    transition: 0.3s;
+}
