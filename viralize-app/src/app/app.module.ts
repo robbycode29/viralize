@@ -8,6 +8,7 @@ import { ThreemodelComponent } from './threemodel/threemodel.component';
 import { ContactComponent } from './contact/contact.component';
 import { FooterComponent } from './footer/footer.component';
 import { LegalComponent } from './legal/legal.component';
+import { DashboardComponent } from './dashboard/dashboard.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { LegalComponent } from './legal/legal.component';
     ThreemodelComponent,
     ContactComponent,
     FooterComponent,
-    LegalComponent
+    LegalComponent,
+    DashboardComponent
   ],
   imports: [
     BrowserModule,
