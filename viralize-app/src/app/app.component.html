@@ -1,1 +1,26 @@
-<app-landing-page></app-landing-page>
+<!-- navbar -->
+<header>
+    <div class="pos-f-t">
+        <div class="collapse" id="navbarToggleExternalContent">
+          <div class="header-bar p-4">
+            <nav class="main-menu text-white">
+                <li><a class='home-btn-header' routerLink="home">Home</a></li>
+                <li><a class='home-btn-header' routerLink="dashboard">Dashboard</a></li>
+                <li><a class='contact-btn-header' routerLink="home">Contact</a></li>
+                <li><a class='main-btn-legal'>Terms&Conditions</a></li>    
+            </nav>
+            <span class="divider"></span>
+            <span class="text-muted">SC Viralize SRL All Rights Reserved Copyright © 2021</span>
+          </div>
+        </div>
+        <nav class="navbar navbar-dark header-bar">
+          <button class="navbar-toggler" id="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
+            <img class="menu-button" src="/assets/nav-toggler-icon.svg">
+          </button>
+          <img class="logo mob-logo" src="/assets/viralize-logo.svg">
+          <img class="logo desk-logo" src="/assets/viralize-logo-desk.svg">
+        </nav>
+    </div>
+</header>
+
+<router-outlet></router-outlet>

@@ -11,14 +11,9 @@ export class LandingPageComponent implements OnInit {
 
   ngOnInit(): void {
 
-    let home = document.querySelector('.home-btn-header');
     let contact = document.querySelector('.contact-btn-header');
     let contactSection = document.getElementById('contact-section');
     let buttonCTA = document.querySelector('.button-CTA');
-
-    home?.addEventListener('click', (event) => {
-      window.location.href = '/';
-    });
 
     const scrollToContact = () => contactSection?.scrollIntoView({
       behavior: 'smooth',
