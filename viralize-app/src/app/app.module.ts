@@ -1,5 +1,7 @@
+import { FormBuilder, FormGroup } from '@angular/forms';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -9,6 +11,9 @@ import { ContactComponent } from './contact/contact.component';
 import { FooterComponent } from './footer/footer.component';
 import { LegalComponent } from './legal/legal.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
+import { LoginpageComponent } from './dashboard/loginpage/loginpage.component';
+import { LoginComponent } from './dashboard/loginpage/login/login.component';
+import { SignupComponent } from './dashboard/loginpage/signup/signup.component';
 
 @NgModule({
   declarations: [
@@ -18,13 +23,18 @@ import { DashboardComponent } from './dashboard/dashboard.component';
     ContactComponent,
     FooterComponent,
     LegalComponent,
-    DashboardComponent
+    DashboardComponent,
+    LoginpageComponent,
+    LoginComponent,
+    SignupComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule,
+    ReactiveFormsModule
   ],
-  providers: [],
+  providers: [FormBuilder],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
