@@ -8,14 +8,17 @@
     
 </head>
 <form [formGroup] = "loginForm">
-    <div class='flex flex-col w-96 caret-transparent gap-10'>
-        <div class='flex flex-row gap-5'>
+    <div class='flex flex-col w-80 caret-transparent gap-5'>
+        <div class='flex flex-row gap-5 my-4'>
             <h3 class='text-lg'>Email: </h3>
-            <input class='w-72 p-1 absolute right-0 border-slate-600 border-2 rounded-lg caret-black'>
+            <input id='email' formControlName='email' class='w-56 p-1 absolute right-0 border-slate-600 border-2 rounded-lg caret-black'>
         </div>
+        <div *ngIf="email.invalid && email.touched" class='text-white bg-red-400 text-center rounded-lg p-1 -translate-y-6'>Email invalid!</div>
         <div class='flex flex-row gap-5'>
             <h3 class='text-lg'>Password: </h3>
-            <input class='w-72 p-1 absolute right-0 border-slate-600 border-2 rounded-lg caret-black'>
+            <input id='password' formControlName='password' class='w-56 p-1 absolute right-0 border-slate-600 border-2 rounded-lg caret-black'>
         </div>
+        <div *ngIf="password.invalid && password.touched" class='text-white bg-red-400 text-center rounded-lg p-1 -translate-y-1'>Password invalid!</div>
+        <button type='button' (click)='logIn()' [disabled]='this.loginForm.invalid' class='bg-purple-100 hover:bg-purple-200 hover:duration-200 border-purple-200 border-2 rounded-lg w-1/2 self-center p-1 my-10 hover:cursor-pointer'>Log in</button>
     </div>
 </form>

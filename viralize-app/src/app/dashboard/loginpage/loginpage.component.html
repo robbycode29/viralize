@@ -7,13 +7,15 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     
 </head>
+<app-legal></app-legal>
 <div class='flex flex-col h-screen items-center'>
-    <div class='flex flex-row top-5 translate-y-28 w-96 caret-transparent'>
+    <div class='flex flex-row top-5 translate-y-28 w-80 caret-transparent'>
         <button id='loginBtn' (click)="this.switchToLogin()" class='focus:outline-none text-center w-1/2 p-2 border-b-2 border-gray-500'>Log in</button>
         <button id='signupBtn' (click)="this.switchToSignup()" class='focus:outline-none text-center w-1/2 p-2'>Sign up</button>
     </div>
-    <div id='form-container' class='translate-y-28 my-10'>
+    <div id='form-container' class='translate-y-28 my-10 w-80'>
         <app-login id='login'></app-login>
         <app-signup id='signup' style='display: none;'></app-signup>
     </div>
 </div>
+<app-footer></app-footer>
