@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { FormBuilder, FormGroup } from '@angular/forms';
+import { EmailValidator, FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { FormsModule } from '@angular/forms';
+import { groupBy } from 'rxjs/internal/operators/groupBy';
 
 @Component({
   selector: 'app-login',
@@ -7,21 +9,28 @@ import { FormBuilder, FormGroup } from '@angular/forms';
   styleUrls: ['./login.component.css']
 })
 export class LoginComponent implements OnInit {
-  
-loginForm: FormGroup | any
-
   constructor(private fb: FormBuilder) { }
+  loginForm: FormGroup | any
 
   ngOnInit(): void {
     this.loadForm()
-    this.loginForm = this.fb.group({
-      email: 'Email',
-      password: 'Password'
-    })
   }
 
   loadForm() {
-    
+    this.loginForm = this.fb.group({
+      email: ['', [Validators.required, Validators.email]],
+      password: ['', [Validators.required]]
+    })
   }
 
+  get email() {
+    return this.loginForm.get('email')
+  }
+  get password() {
+    return this.loginForm.get('password')
+  }
+
+  logIn() {
+    console.log(this.email.value, this.password.value)
+  }
 }
